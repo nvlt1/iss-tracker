@@ -65,3 +65,15 @@ while True:
     location = result["iss_position"]
     lat = location["latitude"]
     lon = location["longitude"]
+
+    # output long and lat to the terminal
+    lat = float(lat)
+    lon = float(lon)
+    print("\nLatitude: " + str(lat))
+    print("\nLongitude: " + str(lon))
+
+    # update ISS location on the map. goto moves image to an absolute position
+    iss.goto(lon, lat)
+
+    # Refresh every 5 seconds
+    time.sleep(5)
