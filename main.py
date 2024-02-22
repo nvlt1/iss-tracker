@@ -27,3 +27,7 @@ for p in people:
 
 
 # print our current longitude and langitude in txt file
+g = geocoder.ip("me")
+file.write("\n Your current lat / long is: " + str(g.latlng))
+file.close()
+webbrowser.open("iss.txt")
